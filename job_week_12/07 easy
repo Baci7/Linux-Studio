@@ -14,10 +14,3 @@ int reverse(int x)
     else
         return result;
 }
-int main()
-{
-	int x;
-	printf("请输入一个数：");
-	scanf("%d",&x); 
-	reverse(x);
-} 
