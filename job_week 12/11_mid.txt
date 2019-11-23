@@ -1,0 +1,126 @@
+char *f(int temp)
+
+{
+
+    // int value[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+    if(temp == 1000) {
+
+        return "M";
+
+    } else if(temp == 900) {
+
+        return "CM";
+
+    } else if(temp == 500) {
+
+        return "D";
+
+    } else if(temp == 400) {
+
+        return "CD";
+
+    } else if(temp == 100) {
+
+        return "C";
+
+    } else if(temp == 90) {
+
+        return "XC";
+
+    } else if(temp == 50) {
+
+        return "L";
+
+    } else if(temp == 40) {
+
+        return "XL";
+
+    } else if(temp == 10) {
+
+        return "X";
+
+    } else if(temp == 9) {
+
+        return "IX";
+
+    } else if(temp == 5) {
+
+        return "V";
+
+    } else if(temp == 4) {
+
+        return "IV";
+
+    } else if(temp == 1) {
+
+        return "I";
+
+    }
+
+    return "";
+
+}
+
+
+
+/* 返回距离num最大的可能数字
+
+1994 -> 1000
+
+994 -> 900
+
+94 -> 90
+
+4 -> 4
+
+*/
+
+int GetValue(int num)
+
+{
+
+    int value[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+    for (int i = 0; i < sizeof(value) / sizeof(int); i++)
+
+    {
+
+        if(num>=value[i])
+
+        {
+
+            return value[i];
+
+        }
+
+    }
+
+
+
+    return 0;
+
+}
+
+char *intToRoman(int num)
+
+{
+
+    char *res = calloc(1000, sizeof(char));
+
+    while (num > 0)
+
+    {
+
+        int temp = GetValue(num);
+
+        strcat(res, f(temp));
+
+        num -= temp;
+
+    }
+
+    return res;
+
+}
+
