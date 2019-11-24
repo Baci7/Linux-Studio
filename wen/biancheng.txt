@@ -1,0 +1,71 @@
+1.给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+#include<stdio.h>
+int main()
+{
+    int a[4] ={2,7,11,15};
+    int sums=0;
+    int b;
+    scanf("%d",&b);
+    int i,j;
+    for(i=0;i<4;i++)
+{
+        for(j=i+1;j<4;j++)
+    {
+    if((a[i]+a[j])==b)
+    {
+    printf("[%d,%d]\n",i,j);
+    return 0;
+}
+}
+}
+}
+2.判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+
+示例 1:
+
+输入: 121
+输出: true
+#include<stdio.h>
+int main()
+{
+int i,n,j,m=0;
+scanf("%d",&n);
+j=n;
+while(n>0){
+i=n%10;
+m=m*10+i;
+n=n/10;}
+if(m==j){
+printf("true");}
+else
+printf("false");
+return 0;
+}
+3.实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。
+
+ 
+
+示例 1：
+
+输入: "Hello"
+输出: "hello"
+#include<stdio.h>
+int main()
+{
+char a[1000];
+int i;
+scanf("%s",a);
+for(i=0;a[i]!='\0' ;i++){
+if(a[i]<='Z'&&a[i]>='A')
+a[i]=a[i]+32;
+else
+(a[i]=a[i]);
+};
+
+printf("%s",a);
+return 0;
+}
