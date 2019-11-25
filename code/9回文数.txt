@@ -1,0 +1,21 @@
+
+alindrome(int x){
+    int t;
+    long y=0;
+    int n=x;
+    if(x<0)
+    {
+        return false;
+    }
+    else{
+        while(x!=0){
+            t=x%10;
+            x=x/10;
+            y=t+y*10;
+        }
+        if(n== y){
+            return true;
+        }
+        return false;
+    }
+}
