@@ -1,0 +1,17 @@
+bool isPalindrome(int x)
+{
+    if(x<0)
+    {
+        return false;
+    }
+    long s = 0;
+    int t = x;
+    while(t) 
+    {   
+		s = s*10;
+        s+=t%10;
+        t/=10;  
+    }
+    
+    return s==x;
+}
