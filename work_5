@@ -1,0 +1,25 @@
+58  easy
+#include<stdio.h>
+int lengthOfLastWord(char * s)
+{
+    int wordLength = 0;
+    int index = 0;
+    while(s[index])
+    {
+        index++;
+    }
+    index;
+    while(index>=0 && s[index]==' '){
+
+        index--;
+    }
+    while(index>=0 && s[index]!=' ')
+    {
+        index--;
+        wordLength++;
+    }
+
+    return wordLength;
+}
+
+
