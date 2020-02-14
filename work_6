@@ -1,0 +1,23 @@
+69  easy
+#include<stdio.h>
+int mySqrt(int x) 
+{
+    int mark = 0;
+    long numbuf;
+    long i = 0;
+    numbuf = i * i;
+    while(numbuf <= x) 
+    { 
+        if(numbuf == x)
+        {
+            return i; 
+        } 
+        else 
+        {
+            mark = i;
+        } 
+        i++;
+        numbuf = i * i;
+    }
+    return mark;
+}
